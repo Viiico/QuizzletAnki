@@ -1,1 +1,0 @@
-alert("First run of my plugin");
