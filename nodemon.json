@@ -1,0 +1,5 @@
+{
+    "watch": "../ankiquizz",
+    "ext": ".ts",
+    "exec": "bun build script.ts --outdir ./dist"
+}

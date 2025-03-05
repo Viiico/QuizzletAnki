@@ -1,19 +1,25 @@
 {
-    "manifest_version": 2,
-    "name": "AnkiQuizz",
-    "version": "1.0",
-  
-    "description": "Converts Quizziz decks into Anki with options of subdecks and merging whole deck",
-  
-    "icons": {
-      "96": "icons/AnkiQuizzLogo-96.png",
+  "manifest_version": 2,
+  "name": "AnkiQuizz",
+  "version": "1.0",
+
+  "description": "Converts Quizziz decks into Anki with options of subdecks and merging whole deck",
+
+  "icons": {
+    "96": "icons/AnkiQuizzLogo-96.png",
+    "48": "icons/AnkiQuizzLogo-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://quizlet.com/*"],
+      "js": ["dist/script.js"]
+    }
+  ],
+  "page_action": {
+    "default_icon": {
       "48": "icons/AnkiQuizzLogo-48.png"
     },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.mozilla.org/*"],
-        "js": ["script.ts"]
-      }
-    ]
+    "default_popup": "content/popup.html",
+    "show_matches": ["https://quizlet.com/*"]
   }
+}
